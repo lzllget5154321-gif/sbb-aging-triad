@@ -271,7 +271,7 @@ Rscript -e 'source("utils/visualization_theme.R")'
 > [Author List]. Sensory-body-brain aging triad: dual sensory impairment and cognitive decline
 > across five international cohorts. *Nature Communications* (under review). 2026.
 >
-> Code & reproducible pipeline: [GitHub URL — 待 Task 40 填入]
+> Code & reproducible pipeline: [https://github.com/lzllget5154321-gif/sbb-aging-triad](https://github.com/lzllget5154321-gif/sbb-aging-triad)
 > Archived version: [Zenodo DOI — 待 Task 41 填入]
 
 ---
