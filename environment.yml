@@ -1,0 +1,62 @@
+# =============================================================================
+# Conda Environment — SBB Aging Triad Study
+# =============================================================================
+# 项目: 脑体感官衰老耦合解耦研究 (Sensory-Body-Brain Aging Triad)
+# 投稿目标: Nature Communications
+# 版本: v1.0 (2026-06-21)
+#
+# 创建环境:
+#   conda env create -f environment.yml
+# 激活环境:
+#   conda activate sbb-aging-triad
+# 更新环境:
+#   conda env update -f environment.yml --prune
+# =============================================================================
+
+name: sbb-aging-triad
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # --- Core Python ---
+  - python=3.10.14
+
+  # --- Data Manipulation ---
+  - pandas=2.1.4
+  - numpy=1.26.4
+  - scipy=1.12.0
+
+  # --- Statistical Modeling ---
+  - statsmodels=0.14.1
+  - lifelines=0.27.8            # CoxPH survival models (v11b_enhanced_pipeline)
+
+  # --- Machine Learning ---
+  - scikit-learn=1.4.2
+  - xgboost=2.0.3               # XGBoost classifier (v11b_enhanced_pipeline)
+  - lightgbm=4.3.0              # LightGBM classifier (v11b_enhanced_pipeline)
+
+  # --- Visualization ---
+  - matplotlib=3.8.3
+  - seaborn=0.13.2
+
+  # --- Interpretability ---
+  - shap=0.44.1                 # SHAP feature importance (v11b_enhanced_pipeline)
+
+  # --- I/O & File Formats ---
+  - openpyxl=3.1.2              # Excel .xlsx read/write (pandas Excel I/O)
+  - pyyaml=6.0.1                # YAML config file parsing
+  - pyarrow=15.0.0              # Parquet/Feather fast I/O
+
+  # --- Reproducible Research ---
+  - jupyterlab=4.1.5            # Interactive notebook environment
+  - ipykernel=6.29.2            # Jupyter kernel for conda env
+
+  # --- Network & Graph Analysis ---
+  - networkx=3.2.1              # Graph/network structures (DAG, pathway diagrams)
+
+  # --- Utilities ---
+  - pip
+  - pip:
+      # Packages not available on conda-forge or requiring pip install:
+      # (all core deps covered by conda above — pip section reserved for future additions)

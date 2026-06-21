@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+venv/
+env/
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Conda
+conda/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (real data files should NOT be committed)
+data_derived/
+data_raw/
+
+# Results (generated, not source)
+results/
+*.csv
+!demo_data/*.csv
+!demo_output/**/*.json
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Archives
+_archive/

@@ -1,0 +1,46 @@
+# =============================================================================
+# Python Requirements — SBB Aging Triad Study
+# =============================================================================
+# 项目: 脑体感官衰老耦合解耦研究 (Sensory-Body-Brain Aging Triad)
+# 投稿目标: Nature Communications
+# 版本: v1.0 (2026-06-21)
+#
+# 安装:
+#   pip install -r requirements.txt
+#
+# 建议: 优先使用 environment.yml (conda) 获得更可靠的环境复现。
+#       requirements.txt 作为备选方案或轻量 pip-only 环境。
+# =============================================================================
+
+# --- Core Data Manipulation ---
+pandas==2.1.4
+numpy==1.26.4
+scipy==1.12.0
+
+# --- Statistical Modeling ---
+statsmodels==0.14.1
+lifelines==0.27.8
+
+# --- Machine Learning ---
+scikit-learn==1.4.2
+xgboost==2.0.3
+lightgbm==4.3.0
+
+# --- Visualization ---
+matplotlib==3.8.3
+seaborn==0.13.2
+
+# --- Model Interpretability ---
+shap==0.44.1
+
+# --- I/O & File Formats ---
+openpyxl==3.1.2
+pyyaml==6.0.1
+pyarrow==15.0.0
+
+# --- Reproducible Research ---
+jupyterlab==4.1.5
+ipykernel==6.29.2
+
+# --- Network & Graph ---
+networkx==3.2.1

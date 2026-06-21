@@ -1,0 +1,100 @@
+# =============================================================================
+# R Requirements — SBB Aging Triad Study
+# =============================================================================
+# 项目: 脑体感官衰老耦合解耦研究 (Sensory-Body-Brain Aging Triad)
+# 投稿目标: Nature Communications
+# 版本: v1.0 (2026-06-21)
+# R 最低版本: 4.2.0
+#
+# 安装方式:
+#   方式A (批量安装):
+#     Rscript -e 'pkgs <- readLines("R_requirements.txt");
+#       pkgs <- pkgs[!grepl("^#", pkgs) & pkgs != ""];
+#       install.packages(pkgs, repos = "https://cloud.r-project.org")'
+#
+#   方式B (逐包安装):
+#     R -e 'install.packages("<package>")'
+#
+#   Bioconductor 包 (grf):
+#     R -e 'if (!require("BiocManager")) install.packages("BiocManager");
+#       BiocManager::install("grf")'
+#
+# 推荐 R 版本: 4.3.x 或更高
+# 建议同时安装 RStudio (>= 2024.04) 用于交互式分析
+# =============================================================================
+
+# ============================================================
+# Core Analysis Packages
+# ============================================================
+
+# Causal Forest (cross-cohort heterogeneous treatment effects)
+# 用途: causal_forest_extended.R
+# 安装: install.packages("grf")
+grf
+
+# E-value Sensitivity Analysis (unmeasured confounding)
+# 用途: compute_evalues.R
+# 安装: install.packages("EValue")
+EValue
+
+# ============================================================
+# Missing Data Imputation
+# ============================================================
+
+# Multiple Imputation by Chained Equations (MICE)
+# 用途: 08_missing_imputation.R
+# 安装: install.packages("mice")
+mice
+
+# Missing data visualization
+# 用途: 08_missing_imputation.R
+# 安装: install.packages("naniar")
+naniar
+
+# Missing value dependency analysis (missing data patterns)
+# 用途: 08_missing_imputation.R
+# 安装: install.packages("finalfit")
+finalfit
+
+# Rubin's rules for pooling MI estimates
+# 用途: 08_missing_imputation.R
+# 安装: install.packages("mitools")
+mitools
+
+# ============================================================
+# Data Manipulation & Visualization
+# ============================================================
+
+# Fast data manipulation (data.table syntax)
+# 用途: causal_forest_extended.R
+# 安装: install.packages("data.table")
+data.table
+
+# Tidyverse data manipulation
+# 用途: causal_forest_extended.R, 08_missing_imputation.R
+# 安装: install.packages("dplyr")
+dplyr
+
+# Grammar of Graphics visualization
+# 用途: 08_missing_imputation.R, utils/visualization_theme.R
+# 安装: install.packages("ggplot2")
+ggplot2
+
+# JSON I/O (read GWAS summary statistics, config files)
+# 用途: compute_evalues.R
+# 安装: install.packages("jsonlite")
+jsonlite
+
+# Survival analysis (Cox PH models)
+# 用途: 08_missing_imputation.R
+# 安装: install.packages("survival")
+survival
+
+# ============================================================
+# Quick Install (uncomment and run in R)
+# ============================================================
+# install.packages(c(
+#   "grf", "EValue",
+#   "mice", "naniar", "finalfit", "mitools",
+#   "data.table", "dplyr", "ggplot2", "jsonlite", "survival"
+# ), repos = "https://cloud.r-project.org")
